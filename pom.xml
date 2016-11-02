@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ajila.tools</groupId>
+    <artifactId>checkstyle-rules</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Ajila Checkstyle Rules</name>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.atlassian.maven.plugins</groupId>
+                <artifactId>maven-jgitflow-plugin</artifactId>
+                <version>1.0-alpha8</version>
+                <configuration>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <releaseVersion>${releaseNumber}</releaseVersion>
+                    <releaseBranchVersionSuffix>release-</releaseBranchVersionSuffix>
+                    <developmentVersion>${snapshotNumber}</developmentVersion>
+                    <pushChanges>true</pushChanges>
+                    <useReleaseProfile>true</useReleaseProfile>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <scm>
+        <connection>scm:git:ssh://git@192.168.196.51:7999/ajila/ajilacheckstylerules.git</connection>
+        <developerConnection>scm:git:ssh://git@192.168.196.51:7999/ajila/ajilacheckstylerules.git</developerConnection>
+        <url>http://192.168.196.51:7990/ajila/ajilacheckstylerules.git</url>
+    </scm>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>AjilaSnapshots</id>
+            <url>http://192.168.196.51:8081/nexus/content/repositories/AjilaSnapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>AjilaReleases</id>
+            <url>http://192.168.196.51:8081/nexus/content/repositories/AjilaReleases</url>
+        </repository>
+    </distributionManagement>
+
+</project>
