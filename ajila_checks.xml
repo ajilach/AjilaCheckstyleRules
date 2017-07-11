@@ -154,9 +154,11 @@
         <module name="OverloadMethodsDeclarationOrder"/>
         <module name="VariableDeclarationUsageDistance"/>
         <module name="CustomImportOrder">
-            <property name="specialImportsRegExp" value="^ch.ajila.*|com.ajila.*"/>
+            <property name="customImportOrderRules" value="SPECIAL_IMPORTS###THIRD_PARTY_PACKAGE###STANDARD_JAVA_PACKAGE###STATIC"/>
+            <property name="specialImportsRegExp" value="^ch.ajila.*|com.ajila.*|^javax\."/>
             <property name="sortImportsInGroupAlphabetically" value="true"/>
-            <property name="customImportOrderRules" value="THIRD_PARTY_PACKAGE###SPECIAL_IMPORTS###STANDARD_JAVA_PACKAGE###STATIC"/>
+            <property name="standardPackageRegExp" value="^java\."/>
+            <property name="separateLineBetweenGroups" value="true"/>
         </module>
         <module name="MethodParamPad"/>
         <module name="OperatorWrap">
