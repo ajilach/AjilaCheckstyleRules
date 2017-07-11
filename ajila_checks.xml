@@ -156,7 +156,7 @@
         <module name="CustomImportOrder">
             <property name="specialImportsRegExp" value="^ch.ajila.*|com.ajila.*"/>
             <property name="sortImportsInGroupAlphabetically" value="true"/>
-            <property name="customImportOrderRules" value="THIRD_PARTY_PACKAGE###STANDARD_JAVA_PACKAGE###SPECIAL_IMPORTS###STATIC"/>
+            <property name="customImportOrderRules" value="THIRD_PARTY_PACKAGE###SPECIAL_IMPORTS###STANDARD_JAVA_PACKAGE###STATIC"/>
         </module>
         <module name="MethodParamPad"/>
         <module name="OperatorWrap">
